@@ -14,7 +14,7 @@ class _LoginScreenState extends State<LoginScreen> {
     return GestureDetector(
         onTap: () => _uidFocusNode.unfocus(),
         child: Scaffold(
-          backgroundColor: ThemePecas.gray,
+          
           body: SafeArea(
             child: Padding(
                 padding: EdgeInsets.all(10),
@@ -30,7 +30,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       Text(
                         'FlutterFire',
                         style: TextStyle(
-                          color: ThemePecas.white,
+                           
                           fontSize: 40,
                         ),)
                       ],

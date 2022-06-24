@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:trabpdm/screens/pecasscreen.dart';
 import 'screens/loginscreen.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       debugShowCheckedModeBanner: false,
-      home: LoginScreen(),
+      home: PecasScreen(),
     );
   }
 }

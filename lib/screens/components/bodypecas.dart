@@ -5,14 +5,14 @@ class BodyPecas extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      
       children: <Widget>[
         Padding(
+          
             padding: const EdgeInsets.symmetric(horizontal: 20),
+            
             child: Text("Categorias",
-                style: Theme.of(context)
-                    .textTheme
-                    .headline5
-                    ?.copyWith(fontWeight: FontWeight.bold))),
+                style:TextStyle(color: colorOrange, fontWeight: FontWeight.bold, fontSize: 24, fontFamily:"Open Sans"))),
         Categories(),
       ],
     );
@@ -30,6 +30,7 @@ class _CategoriesState extends State<Categories> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
+      
       height: 25,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,

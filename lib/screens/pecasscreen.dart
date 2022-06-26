@@ -20,11 +20,11 @@ class PecasScreen extends StatelessWidget {
           actions:<Widget>[
 
            IconButton(
-            icon: Icon(Icons.search_rounded),
+            icon: Icon(Icons.insert_drive_file_outlined),
             onPressed: () {},
           ),
           IconButton(
-            icon: Icon(Icons.shopping_cart),
+            icon: Icon(Icons.delete_outlined),
             onPressed: () {},
           ),
           SizedBox(width: 10)

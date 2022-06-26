@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "740187862346",
+    "project_id": "customparts-a3c27",
+    "storage_bucket": "customparts-a3c27.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:740187862346:android:024106e8183fdd3560fdb3",
+        "android_client_info": {
+          "package_name": "com.example.trabpdm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "740187862346-4j6iiagiga3dgaq321tqnm1jkoq5dstv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASQyNolMvzfhWWHLFQH173vRAlKaXSGvI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "740187862346-4j6iiagiga3dgaq321tqnm1jkoq5dstv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

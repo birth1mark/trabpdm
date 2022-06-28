@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:trabpdm/screens/components/addpeca.dart';
+import 'package:trabpdm/screens/loginscreen.dart';
 import '../res/theme.dart';
 import 'components/bodypecas.dart';
 
@@ -24,14 +25,15 @@ class PecasScreen extends StatelessWidget {
           IconButton(
             icon: Icon(Icons.insert_drive_file_outlined),
             onPressed: () {
-              AddPeca();
+              
+              
             },
           ),
           IconButton(
             icon: Icon(Icons.delete_outlined),
             onPressed: () {},
           ),
-          SizedBox(width: 10)
+          SizedBox(width: 10),
         ]);
   }
 }

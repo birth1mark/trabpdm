@@ -2,7 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:uuid/uuid.dart';
 
 final FirebaseFirestore _firestore = FirebaseFirestore.instance;
-final CollectionReference _mainCollection = _firestore.collection('notes');
+final CollectionReference _mainCollection = _firestore.collection('pecas');
 var uuid = Uuid();
 String userId = uuid.v1();
 
@@ -13,18 +13,18 @@ class Database {
     required String preco,
   }) async {
     DocumentReference documentReferencer =
-        _mainCollection.doc(userId).collection('pecas').doc();
-   
+        _mainCollection.doc().collection('pecas').doc();
+
     Map<String, dynamic> data = <String, dynamic>{
       "nomePeca": nomePeca,
       "descricao": descricao,
       "preco": preco,
     };
-     print(data);
+    print(data);
 
     await documentReferencer
         .set(data)
-        .whenComplete(() => print("Note item added to the database"))
+        .whenComplete(() => print("Peca"))
         .catchError((e) => print(e));
   }
 
@@ -47,12 +47,14 @@ class Database {
   //       .catchError((e) => print(e));
   // }
 
-  // static Stream<QuerySnapshot> readpecas() {
-  //   CollectionReference notesItemCollection =
-  //       _mainCollection.doc(userUid).collection('pecas');
 
-  //   return notesItemCollection.snapshots();
-  // }
+
+  static Stream<QuerySnapshot> readpecas() {
+    CollectionReference notesItemCollection =
+        _mainCollection.doc().collection('pecas');
+    print(notesItemCollection.snapshots());
+    return notesItemCollection.snapshots();
+  }
 
   // static Future<void> deleteItem({
   //   required String docId,

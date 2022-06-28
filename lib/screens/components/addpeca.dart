@@ -1,5 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:trabpdm/res/theme.dart';
@@ -61,7 +63,7 @@ class _AddPecaState extends State<AddPeca> {
                   ),
                   SizedBox(height: 24.0),
                   Text(
-                    'Descrição',
+                    'Categoria',
                     style: TextStyle(
                       color: colorOrange,
                       letterSpacing: 1,
@@ -87,24 +89,20 @@ class _AddPecaState extends State<AddPeca> {
                   TextFormField(
                     controller: _precoController,
                     maxLines: 2,
-                    keyboardType: TextInputType.text,
+                    keyboardType: TextInputType.number,
                   ),
                   FutureBuilder(
-                  future: _initializeFirebase(),
-                  builder: (context, snapshot) {
-                    if (snapshot.hasError) {
-                      return Text('Error initializing Firebase');
-                    } else if (snapshot.connectionState ==
-                        ConnectionState.done) {
-                      print('AAA');
-                    }
-                    return CircularProgressIndicator(
-                      valueColor: AlwaysStoppedAnimation<Color>(
-                        colorOrange,
-                      ),
-                    );
-                  },
-                ),
+                    future: _initializeFirebase(),
+                    builder: (context, snapshot) {
+                      if (snapshot.hasError) {
+                        return Text('Error initializing Firebase');
+                      } else if (snapshot.connectionState ==
+                          ConnectionState.done) {
+                        print('AAA');
+                      }
+                      return  SizedBox.shrink();
+                    },
+                  ),
                 ],
               ),
             ),
